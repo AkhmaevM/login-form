@@ -15,8 +15,8 @@ body {
     align-items: center;
     width: 400px;
 
-    margin-left: 40vw;
-    margin-right: 40vw;
+    margin-left: 38vw;
+    margin-right: 38vw;
     margin-top: 10vh;
 
     &__header {
@@ -41,7 +41,7 @@ body {
         width: 352px;
         height: 38px;
 
-        &:focus{
+        &:focus {
             outline: #8b54ff;
         }
     }
@@ -50,11 +50,12 @@ body {
         display: flex;
         flex-direction: column;
         row-gap: 15px;
+        margin-bottom: 30px;
     }
 
     &__btn {
         border-radius: 20px;
-        
+
         width: 376px;
         height: 38px;
         background: #8b54ff;
@@ -69,6 +70,30 @@ body {
 
         &:last-child {
             background: #6066ff;
+        }
+    }
+
+    &__theme {
+        display: flex;
+        flex-direction: row;
+
+        column-gap: 10px;
+
+        &-btn {
+            width: 100px;
+            background: #6066ff;
+            border: 0;
+            font-weight: 500;
+            font-size: 15px;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            border-radius: 20px;
+
+            &:hover{
+                background-color: #8b54ff;
+                cursor: pointer;
+            }
         }
     }
 }

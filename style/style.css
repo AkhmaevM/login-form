@@ -12,8 +12,8 @@ body {
   flex-direction: column;
   align-items: center;
   width: 400px;
-  margin-left: 40vw;
-  margin-right: 40vw;
+  margin-left: 38vw;
+  margin-right: 38vw;
   margin-top: 10vh;
 }
 .form__header {
@@ -43,6 +43,7 @@ body {
   display: flex;
   flex-direction: column;
   row-gap: 15px;
+  margin-bottom: 30px;
 }
 .form__btn {
   border-radius: 20px;
@@ -59,4 +60,25 @@ body {
 }
 .form__btn:last-child {
   background: #6066ff;
+}
+.form__theme {
+  display: flex;
+  flex-direction: row;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+.form__theme-btn {
+  width: 100px;
+  background: #6066ff;
+  border: 0;
+  font-weight: 500;
+  font-size: 15px;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  border-radius: 20px;
+}
+.form__theme-btn:hover {
+  background-color: #8b54ff;
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
