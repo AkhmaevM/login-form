@@ -1,9 +1,67 @@
-const darkThemeBtn = document.querySelector('.dark-theme');
-const lightThemeBtn = document.querySelector('.ligh-theme');
+const body = document.querySelector('.body');
+const darkThemeBtn = document.querySelector('.dark__theme');
+const lightThemeBtn = document.querySelector('.light__theme');
 const formContainer = document.querySelector('.form');
 const formHeader = document.querySelector('.form__header');
 const formInput = document.querySelectorAll('.form__input');
 
-darkThemeBtn.onclick = () =>{
+const userName = document.querySelector('.user__name');
+const userEmail = document.querySelector('.user__email');
+const userPassword = document.querySelector('.user__password');
+const userConfirmPassword = document.querySelector('.user__confirmPassword');
 
+const registerBtn = document.querySelector('.register__btn');
+const loginBtn = document.querySelector('.login__btn');
+
+registerBtn.onclick = () => {
+    if (userName.value === '' || userEmail.value === '' || userPassword === '' || userConfirmPassword === '') {
+        console.log('Error');
+        alert('Заполните все поля');
+    }
+
+    else {
+
+        window.localStorage.setItem('userName', userName.value);
+        window.localStorage.setItem('userEmail', userEmail.value);
+
+        if (userPassword.value === userConfirmPassword.value) {
+            window.localStorage.setItem('userPassoword', userPassword.value);
+        }
+
+        else {
+            alert('Введенные пароли не совпадают');
+        }
+
+        console.log(window.localStorage);
+    }
+
+
+}
+
+
+darkThemeBtn.onclick = () => {
+    body.style.backgroundColor = '#bb86fc'
+    formContainer.style.backgroundColor = '#121212';
+    formContainer.style.border = '2px solid #bb86fc';
+    formHeader.style.color = '#fff';
+
+    for (let i = 0; i < formInput.length; i++) {
+        formInput[i].style.border = '2px solid #bb86fc';
+        formInput[i].style.color = 'white';
+        formInput[i].style.backgroundColor = '#121212';
+    }
+
+}
+
+lightThemeBtn.onclick = () => {
+    body.style.backgroundColor = '#6066ff'
+    formContainer.style.backgroundColor = '#fff';
+    formContainer.style.border = '2px solid #6066ff';
+    formHeader.style.color = '#252eff';
+
+    for (let i = 0; i < formInput.length; i++) {
+        formInput[i].style.border = '2px solid #6066ff';
+        formInput[i].style.color = 'black';
+        formInput[i].style.backgroundColor = 'white';
+    }
 }
