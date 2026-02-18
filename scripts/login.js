@@ -17,49 +17,67 @@ const loginBtn = document.querySelector('.login__btn');
 
 
 
-// toRegisterBtn.addEventListener('click', (e)=>{
-//     window.location.href = "index.html";
-//     console.log(e);
-//     console.log(window.location.href);
-// })
+toRegisterBtn.addEventListener('click', (e)=>{
+    e.preventDefault()
+    window.location.href = "/index.html";
+    console.log(e);
+    console.log(window.location.href);
+})
 
 
-registerBtn.addEventListener('click', (e) => {
+// registerBtn.addEventListener('click', (e) => {
+//     e.preventDefault();
+
+//     let emptyField = 0;
+
+//     for (let i = 0; i < formInput.length; i++) {
+//         if (formInput[i].value === '') {
+//             emptyField += 1;
+//         }
+//     }
+
+//     if (emptyField > 0) {
+//         alert('Заполните все поля');
+
+//     }
+
+//     else {
+//         window.localStorage.setItem('userName', userName.value);
+//         window.localStorage.setItem('userEmail', userEmail.value);
+
+//         if (userPassword.value === userConfirmPassword.value) {
+//             window.localStorage.setItem('userPassoword', userPassword.value);
+//         }
+
+//         else {
+//             alert('Введенные пароли не совпадают');
+//         }
+
+//         console.log(window.localStorage);
+
+//         console.log(window.location);
+//         window.location.href = '../pages/login.html';
+//     }
+// }
+// )
+
+console.log(window.localStorage);
+
+loginBtn.addEventListener('click', (e) => {
     e.preventDefault();
 
-    let emptyField = 0;
+    console.log(userName.value);
+    console.log(userPassword.value);
 
-    for (let i = 0; i < formInput.length; i++) {
-        if (formInput[i].value === '') {
-            emptyField += 1;
-        }
+    console.log(window.localStorage.getItem('userName'));
+    if(userName.value.toString() == window.localStorage.getItem('userName') && userPassword.value.toString == window.localStorage.getItem('userPassword')){
+        console.log('succes');
     }
 
-    if (emptyField > 0) {
-        alert('Заполните все поля');
-
+    else{
+        console.log('error');
     }
-
-    else {
-        window.localStorage.setItem('userName', userName.value);
-        window.localStorage.setItem('userEmail', userEmail.value);
-
-        if (userPassword.value === userConfirmPassword.value) {
-            window.localStorage.setItem('userPassoword', userPassword.value);
-        }
-
-        else {
-            alert('Введенные пароли не совпадают');
-        }
-
-        console.log(window.localStorage);
-
-        console.log(window.location);
-        window.location.href = '../pages/login.html';
-    }
-}
-)
-
+});
 
 
 

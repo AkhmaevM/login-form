@@ -55,11 +55,12 @@ body {
   font-size: 15px;
   color: #fff;
   text-align: center;
-  padding-top: 20px;
-  text-decoration: none;
 }
 .form__btn:last-child {
   background: #6066ff;
+}
+.form__btn:hover {
+  cursor: pointer;
 }
 .form__theme {
   display: flex;
