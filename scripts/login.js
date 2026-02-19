@@ -66,16 +66,17 @@ console.log(window.localStorage);
 loginBtn.addEventListener('click', (e) => {
     e.preventDefault();
 
-    console.log(userName.value);
-    console.log(userPassword.value);
-
+    
+    console.log(window.localStorage.userName);
     console.log(window.localStorage.getItem('userName'));
-    if(userName.value.toString() == window.localStorage.getItem('userName') && userPassword.value.toString == window.localStorage.getItem('userPassword')){
+    if(userName.value === window.localStorage.getItem('userName') && userPassword.value.toString() === window.localStorage.getItem('userPassword')){
         console.log('succes');
     }
 
     else{
         console.log('error');
+        console.log(typeof(userName.value));
+        console.log(typeof(userPassword.value));
     }
 });
 
