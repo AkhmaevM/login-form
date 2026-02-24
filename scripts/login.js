@@ -69,19 +69,16 @@ loginBtn.addEventListener('click', (e) => {
     
     console.log(window.localStorage.userName);
     console.log(window.localStorage.getItem('userName'));
-    if(userName.value === window.localStorage.getItem('userName') && userPassword.value.toString() === window.localStorage.getItem('userPassword')){
+    if(userName.value === window.localStorage.getItem('userName') && userPassword.value === window.localStorage.getItem('userPassword')){
         console.log('succes');
     }
 
     else{
         console.log('error');
-        console.log(typeof(userName.value));
+        console.log(window.localStorage.getItem('userPassword'));
         console.log(typeof(userPassword.value));
     }
 });
-
-
-
 
 
 darkThemeBtn.onclick = () => {
@@ -110,3 +107,5 @@ lightThemeBtn.onclick = () => {
         formInput[i].style.backgroundColor = 'white';
     }
 }
+
+

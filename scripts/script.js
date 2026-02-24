@@ -45,7 +45,7 @@ registerBtn.addEventListener('click', (e) => {
         window.localStorage.setItem('userEmail', userEmail.value);
 
         if (userPassword.value === userConfirmPassword.value) {
-            window.localStorage.setItem('userPassoword', userPassword.value);
+            window.localStorage.setItem('userPassword', userPassword.value);
         }
 
         else {
@@ -95,3 +95,5 @@ lightThemeBtn.onclick = () => {
         formInput[i].style.backgroundColor = 'white';
     }
 }
+
+
