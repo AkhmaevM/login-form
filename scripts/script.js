@@ -9,6 +9,7 @@ const userName = document.querySelector('.user__name');
 const userEmail = document.querySelector('.user__email');
 const userPassword = document.querySelector('.user__password');
 const userConfirmPassword = document.querySelector('.user__confirmPassword');
+const userPhone = document.querySelector('.user__phone');
 
 const toRegisterBtn = document.querySelector('.toRegister__btn');
 const registerBtn = document.querySelector('.register__btn');
@@ -43,7 +44,7 @@ registerBtn.addEventListener('click', (e) => {
     else {
         window.localStorage.setItem('userName', userName.value);
         window.localStorage.setItem('userEmail', userEmail.value);
-
+        window.localStorage.setItem('userPhone', userPhone.value);
         if (userPassword.value === userConfirmPassword.value) {
             window.localStorage.setItem('userPassword', userPassword.value);
         }

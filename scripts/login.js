@@ -71,7 +71,7 @@ loginBtn.addEventListener('click', (e) => {
     console.log(window.localStorage.getItem('userName'));
     if(userName.value === window.localStorage.getItem('userName') && userPassword.value === window.localStorage.getItem('userPassword')){
         console.log('succes');
-        window.location.href = './user.html';
+        window.location.href = './profile.html';
     }
 
     else{

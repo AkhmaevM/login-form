@@ -103,7 +103,7 @@ body {
 
 }
 
-.user {
+.profile {
     background-color: #fff;
     border: 2px solid #6066ff;
     border-radius: 10px;
@@ -111,7 +111,7 @@ body {
 
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items:flex-start;
     width: 400px;
 
     margin-left: 38vw;
@@ -120,12 +120,10 @@ body {
 
 
     &__name, &__email, &__phone {
-        font-weight: 700;
-        font-size: 44px;
+        font-weight: 600;
+        font-size: 36px;
         color: #252eff;
     }
-
-
 
 
 }

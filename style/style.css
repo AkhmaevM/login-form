@@ -84,21 +84,21 @@ body {
   cursor: pointer;
 }
 
-.user {
+.profile {
   background-color: #fff;
   border: 2px solid #6066ff;
   border-radius: 10px;
   padding: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   width: 400px;
   margin-left: 38vw;
   margin-right: 38vw;
   margin-top: 10vh;
 }
-.user__name, .user__email, .user__phone {
-  font-weight: 700;
-  font-size: 44px;
+.profile__name, .profile__email, .profile__phone {
+  font-weight: 600;
+  font-size: 36px;
   color: #252eff;
 }/*# sourceMappingURL=style.css.map */
