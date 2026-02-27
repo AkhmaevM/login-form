@@ -65,6 +65,8 @@ body {
 .form__theme {
   display: flex;
   flex-direction: row;
+  width: 100%;
+  justify-content: center;
   -moz-column-gap: 10px;
        column-gap: 10px;
 }
